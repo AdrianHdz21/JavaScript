@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejemplo DOM con JavaScript</title>
+  </head>
+  <body>
+    <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+    <p id="parrafo">Saludos</p>
+    <!--Codigo Script debe ir despues de los elementos HTML-->
+    <script>
+      //Forma 1 de obtener y mostrar un elemento HTML
+      //let cabecero = document.getElementById("cabecero").innerHTML;
+      //console.log("Valor cabecero: " + cabecero);
+
+      //Forma 2
+      //let cabecero = document.getElementById("cabecero");
+      //console.log("Valor cabecero: " + cabecero.innerHTML);
+
+      //Forma 3
+      let cabecero = document.getElementById("cabecero");
+      console.log(`Valor cabecero:  ${cabecero.innerHTML}`);
+
+      let parrafo = document.getElementById("parrafo");
+      console.log(`Valor parrafo: ${parrafo.innerHTML}`);
+      //innerHTML tambien permite la modificacion de valores
+      parrafo.innerHTML = "Nuevo valor del parrafo";
+      cabecero.innerHTML = "Nuevo Cabecero"
+    </script>
+  </body>
+</html>

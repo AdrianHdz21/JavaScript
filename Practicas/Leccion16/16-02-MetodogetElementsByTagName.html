@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejemplo DOM con JavaScript</title>
+  </head>
+  <body>
+    <h1 id="cabecero">Ejemplo DOM con JavaScript</h1>
+    <p id="parrafo1">Saludos</p>
+    <p id="parrafo2">Otro parrafo</p>
+
+    <script>
+      //Metodo de acceso a todos los elementos de un tipo
+      let parrafos = document.getElementsByTagName('p');
+      console.log(`No. Parrafos:  ${parrafos.length}`)
+      for(let i=0;i<parrafos.length;i++){
+        console.log(`${i} - ${parrafos[i].innerHTML}`);
+      }
+    </script>
+  </body>
+</html>

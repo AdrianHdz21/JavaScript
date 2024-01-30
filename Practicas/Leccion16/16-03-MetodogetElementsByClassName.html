@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejemplo DOM con JavaScript</title>
+    <style>
+      .azul {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class=azul>Ejemplo DOM con JavaScript</h1>
+    <p class=azul>Saludos</p>
+    <p class=azul>Otro parrafo</p>
+
+    <script>
+      //Metodo de acceso a todos los elementos con un tipo css
+      let elementos = document.getElementsByClassName("azul");
+      console.log(`No. Elementos:  ${elementos.length}`);
+      //for clasico
+      // for (let i = 0; i < elementos.length; i++) {
+      //   console.log(`${i} - ${elementos[i].innerHTML}`);
+      // }
+      //For of
+      for(let elemento of elementos){
+        console.log(`${elemento.innerHTML}`)
+      }
+    </script>
+  </body>
+</html>
